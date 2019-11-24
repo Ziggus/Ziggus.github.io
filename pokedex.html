@@ -120,11 +120,72 @@
                 padding: 2px;
         }
 
-
+        .topbar
+        {
+                margin: 0;
+                padding: 0;
+                background-color: black;
+                height: 25px;
+                width: 100%;
+        }
+        .bottombar
+        {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                height: 25px;
+                z-index: -1;
+        }
+        .leftbar
+        {
+                height: 100%;
+                width: 27px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: black;
+        }
+        .rightbar
+        {
+                height: 100%;
+                width: 27px;
+                position: fixed;
+                top: 0;
+                left: 98.57%;
+                background-color: black;
+        }
+        .pokeBall
+        {
+                position:absolute;
+                top: 0%;
+                left: 0%;
+                height: 2.75%;
+                width: 1.5%;
+                animation: myfirst 15s infinite;
+        }
+        @keyframes myfirst 
+        {
+                0%   {left: 0px; top: 0px;}
+                25%  {left: 98.5%; top: 0px;}
+                50%  {left: 98.5%; top: 97.25%;}
+                75%  {left: 0px; top: 97.25%;}
+                100% {left: 0px; top: 0px;}
+        }
+        body
+        {
+                margin: 0;
+                padding: 0;  
+        }
 </style>
 
-<!-- These are needed to use firebase -->
 <body>
+                <p class="topbar"> </p>
+                <div class="leftbar"></div>
+                <div class="rightbar"></div>
+                <img id="pokeBallID" class="pokeBall" src="https://img.rankedboost.com/wp-content/uploads/2016/07/PokeBall.png" alt="">
+
                 <div class="container">
                         <h2 align="center"> PokeDex </h2>
                         <p id="demo" align="center">Enter the name of the Pokemon you would like to see.</p>
@@ -143,6 +204,9 @@
                         <img id="dexBG" src="http://gran4u.xtgem.com/Pokedex.png" alt="">
                         <button class="center-block" onclick="window.location.href = 'https://ziggus.github.io/index';">Back to main page</button>
                 </div>     
+                <div class="bottombar">
+                                <p></p>
+                </div>
 </body>
 
 </html>
