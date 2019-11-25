@@ -1,6 +1,9 @@
-## Welcome to GitHub Pages
+## Brandon Reid
 
-<a href="pokedex.html">PokeDex</a>
+[Disney Reservation app (Software design/engineering)](https://github.com/Ziggus/DisneyReservationsCheckerApp)
+[PokeDex (Algorithms and data structure)](pokedex.html)
+[PokeDex (Databases)]()
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
