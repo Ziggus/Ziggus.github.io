@@ -53,6 +53,7 @@
                         document.getElementById("dexImg").src = dexURL;
                         document.getElementById("dexType").innerHTML = "Type(s): "+ dexType;
                         document.getElementById("dexWeaknesses").innerHTML = "Weaknesses: "+ dexWeaknesses;
+                        document.getElementById("userInput").value = "";
                         console.log(result)
                 }
                 catch(err) // catches error if there is no match in the database
@@ -68,7 +69,53 @@
         {
                 console.log("Error!");
                 console.log(err);
-        } 
+        }
+        
+        // begin random function -----------------------------------------------------------------------------------------------------------------
+        function searchRandPokemon()
+        {
+            var ref = firebase.database().ref("pokemon");
+            ref.on('value',gotRandData, errRandData);
+        }
+        function gotRandData(data) // modifies data to find elements to update HTML
+        {
+                //declare variables
+                var pokeInput = Math.floor((Math.random() * 150) + 1);
+                //console.log(pokeInput);
+                var id = data.val();
+                var result = id.find( ({ id }) => id === pokeInput );
+                
+                try
+                {
+                        var dexNum = result["num"];
+                        var dexName = result["name"];
+                        var dexURL = result["img"];
+                        var dexType = result["type"];
+                        var dexWeaknesses = result["weaknesses"];
+                        // update HTML 
+                        document.getElementById("dexName").innerHTML = "Name: " + dexName;
+                        document.getElementById("dexNum").innerHTML = "PokeDex Number: "+ dexNum;
+                        document.getElementById("dexImg").src = dexURL;
+                        document.getElementById("dexType").innerHTML = "Type(s): "+ dexType;
+                        document.getElementById("dexWeaknesses").innerHTML = "Weaknesses: "+ dexWeaknesses;
+                        document.getElementById("userInput").value = "";
+                        console.log(result)
+                }
+                catch(err) // catches error if there is no match in the database
+                {
+                        document.getElementById("dexName").innerHTML = "Sorry that Pokemon is not in the database.";
+                        document.getElementById("dexNum").innerHTML = "Please check your spelling and try again.";
+                        document.getElementById("dexImg").src = "";
+                        document.getElementById("dexType").innerHTML = "";
+                        document.getElementById("dexWeaknesses").innerHTML = "";
+                }
+        }
+        function errRandData(err) 
+        {
+                console.log("Error!");
+                console.log(err);
+        }
+        // end random function -----------------------------------------------------------------------------------------------------------------
         window.onload=function() // allows for the enter button to hit submit
         {
                 var input = document.getElementById("userInput");
@@ -119,7 +166,6 @@
                 border: 2px solid black;
                 padding: 2px;
         }
-
         .topbar
         {
                 margin: 0;
@@ -191,9 +237,13 @@
                 <div class="container">
                         <h2 align="center"> Pokedex </h2>
                         <p id="demo" align="center">Enter the name of the Pokemon you would like to see.</p>
-                        <input class="center-block" type="text" id="userInput" value="Pikachu">
+                        <input class="center-block" type="text" id="userInput" value="">
                         <p></p>
-                        <button class="center-block" type="button" id="searchButton" onclick="searchPokemon()">Search</button>
+                        <div style="text-align: center">
+                                <button type="button" id="searchButton" onclick="searchPokemon()">Search</button>
+                                <button type="button" id="searchButton2" onclick="searchRandPokemon()">Random</button>
+                        </div>
+
                         <p></p>
                         <!-- These get updated via user input -->
                         <div class="dexInfo">
