@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Brandon Reid</title>
+</head>
+<script>
+    function buttonFunction(){
+     document.getElementById("p1").innerHTML = "<button class=\"button\" onclick=\"secondFunction()\">Pokedex</button>";
+     document.getElementById("p2").innerHTML = "<button class=\"button\" onclick=\"secondFunction()\">Disney Reservation App</button>";
+     document.getElementById("p3").innerHTML = "<button class=\"button\" onclick=\"secondFunction()\">TBD</button>";
+}
+function resumeFunction(){
+    document.getElementById("p1").innerHTML = "";
+    document.getElementById("p2").innerHTML = "";
+    document.getElementById("p3").innerHTML = "";
+}
+</script>
+<body>
+    <div class="topBar">
+        <h1 class="mainName"> Brandon Reid</h1>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="https://ziggus.github.io/">Home</a></li>
+            <li><a href="Resume.pdf" target="_blank" onclick="resumeFunction()">Resume</a></li>
+            <li><a href="#about" onclick="buttonFunction()">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+    </div>
+
+    <div class="mainList">
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+    </div>
+
+</body>
+</html>

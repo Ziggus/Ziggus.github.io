@@ -1,0 +1,64 @@
+body {
+    background-color: white;
+    margin:0; 
+    padding:0;
+  }
+  
+.topBar{
+    background-color: rgb(180, 180, 255);
+    display: flex;
+    justify-content: center;
+}
+.mainName {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(140, 140, 255);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(100, 100, 255);
+  }
+
+  .mainList{
+    text-align: center;
+    padding: 100px 0;
+  }
+  p{
+      padding: 25px;
+      font-size: x-large;
+
+  }
+  .button {
+    background-color: rgb(140, 140, 255);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 250px;
+  }
+  .button:hover {
+    background-color: rgb(100, 100, 255);
+  }
