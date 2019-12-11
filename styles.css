@@ -35,6 +35,7 @@ ul {
   
   li a:hover {
     background-color: rgb(100, 100, 255);
+    cursor: pointer;
   }
 
   .mainList{
@@ -57,7 +58,7 @@ ul {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    width: 250px;
+    width: 500px;
   }
   .button:hover {
     background-color: rgb(100, 100, 255);
