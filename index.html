@@ -15,13 +15,14 @@ function visitPokedexGH(){
 function visitPokedex(){
         window.location='pokedex.html';
 }
-function homeFunction(){
+function homeFunction(){ 
     document.getElementById("div1").innerHTML = "";
     document.getElementById("div2").innerHTML = "";
     document.getElementById("div3").innerHTML = "";
     document.getElementById("div4").innerHTML = "";
     document.getElementById("div5").innerHTML = "";
 }
+
 function resumeFunction(){
     document.getElementById("div1").innerHTML = " <a href=\"resume.pdf\" target=\"_blank\"> <img src=\"https://i.imgur.com/iLo8pRh.jpg\" href=\"https://github.com/Ziggus/Ziggus.github.io/blob/master/Resume.pdf\" target=\"_blank\"> </a>";
     document.getElementById("div2").innerHTML = "";
@@ -32,20 +33,40 @@ function resumeFunction(){
 function projectsFunction(){
      document.getElementById("div1").innerHTML = "<button class=\"button\" onClick=\"window.open('pokedex.html');\"><span class=\"icon\">PokeDex Application</span></button>\
                                                 <button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/Ziggus.github.io/blob/master/pokedex.html');\"><span class=\"icon\">PokeDex GitHub page</span></button>";
+
      document.getElementById("div2").innerHTML = "<button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/DisneyReservationsCheckerApp');\"><span class=\"icon\">Disney Reservation Application</span></button>";
+
      document.getElementById("div3").innerHTML = "<button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/firebase-crud-python');\"><span class=\"icon\">Python CRUD functions for PokeDex application</span></button>";
+
      document.getElementById("div4").innerHTML = "";
      document.getElementById("div5").innerHTML = "";
 }
 function contactFunction(){
-    document.getElementById("div1").innerHTML = "";
-    document.getElementById("div2").innerHTML = "";
-    document.getElementById("div3").innerHTML = "";
+    document.getElementById("div1").innerHTML = "<h1>Contact info</h1>";
+    document.getElementById("div2").innerHTML = "<h3>Phone:<br>603-973-5334</h3>";
+    document.getElementById("div3").innerHTML = "<h3>Email:<br><a href=\"mailto:Brandon.Reid@Snhu.Edu\">Brandon.Reid@Snhu.Edu</a></h3>";
     document.getElementById("div4").innerHTML = "";
     document.getElementById("div5").innerHTML = "";
 }
-function aboutFunction(){
-    document.getElementById("div1").innerHTML = "";
+function exampleVids(){ // no longer needed but leaving incase there is a future need
+    document.getElementById("div1").innerHTML = "   <h2><a href=\"https://github.com/Ziggus/Ziggus.github.io/blob/master/pokedex.html\">Pokedex example (Algorithm and Data Structures / Database)</a></h2>\
+                                                    <h3>Technologies: HTML, CSS, JavaScript, Firebase</h3>\
+                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Opm0wbwrhS0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+
+    document.getElementById("div2").innerHTML = "   <h2><a href=\"https://github.com/Ziggus/firebase-crud-python\">Database</a></h2>\
+                                                    <h3>Technologies: Python, Firebase, JavaScript</h3>\
+                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/noA23FgyD5c\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+
+    document.getElementById("div3").innerHTML = "   <h2><a href=\"https://github.com/Ziggus/DisneyReservationsCheckerApp\">Software Design and Engineering</a></h2>\
+                                                    <h3>Technologies: Python, Selenium, Twilio</h3>\
+                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbQ8HA7hYrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+
+    document.getElementById("div4").innerHTML = "";
+    document.getElementById("div5").innerHTML = "";
+}
+function codeReview(){ //change link to video
+    document.getElementById("div1").innerHTML = "   <h2>Code Review</h2>\
+                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbQ8HA7hYrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
     document.getElementById("div2").innerHTML = "";
     document.getElementById("div3").innerHTML = "";
     document.getElementById("div4").innerHTML = "";
@@ -61,8 +82,9 @@ function aboutFunction(){
             <li><a href="https://ziggus.github.io/" onclick="homeFunction()">Home</a></li>
             <li><a onclick="resumeFunction()">Resume</a></li>
             <li><a onclick="projectsFunction()">Projects</a></li>
+            <li><a onclick="exampleVids()">Example videos</a></li>
+            <li><a onclick="codeReview()">Code review</a></li>
             <li><a onclick="contactFunction()">Contact</a></li>
-            <!-- <li><a onclick="aboutFunction()">About</a></li> -->
           </ul>
     </div>
     <div class="mainList">
