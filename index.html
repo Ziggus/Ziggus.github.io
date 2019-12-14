@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" href="styles.css">
     <title>Brandon Reid</title>
 </head>
 <script>
-function visitPokedexGH(){
-        window.location='https://github.com/Ziggus/Ziggus.github.io/blob/master/pokedex.html';
-}
-function visitPokedex(){
-        window.location='pokedex.html';
-}
-function homeFunction(){ 
-    document.getElementById("div1").innerHTML = "";
+function homeFunction(){ // needs work
+    document.getElementById("div1").innerHTML = "<p class=\"homeInfo\">Test</p>";
     document.getElementById("div2").innerHTML = "";
     document.getElementById("div3").innerHTML = "";
     document.getElementById("div4").innerHTML = "";
@@ -30,59 +23,75 @@ function resumeFunction(){
     document.getElementById("div4").innerHTML = "";
     document.getElementById("div5").innerHTML = "";
 }
-function projectsFunction(){
-     document.getElementById("div1").innerHTML = "<button class=\"button\" onClick=\"window.open('pokedex.html');\"><span class=\"icon\">PokeDex Application</span></button>\
-                                                <button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/Ziggus.github.io/blob/master/pokedex.html');\"><span class=\"icon\">PokeDex GitHub page</span></button>";
-
-     document.getElementById("div2").innerHTML = "<button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/DisneyReservationsCheckerApp');\"><span class=\"icon\">Disney Reservation Application</span></button>";
-
-     document.getElementById("div3").innerHTML = "<button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/firebase-crud-python');\"><span class=\"icon\">Python CRUD functions for PokeDex application</span></button>";
-
-     document.getElementById("div4").innerHTML = "";
-     document.getElementById("div5").innerHTML = "";
+function sdeFunc(){ // done
+    document.getElementById("div1").innerHTML = "   <button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/DisneyReservationsCheckerApp');\"><span class=\"icon\">Disney Reservation Application (Click me!)</span></button>";
+    document.getElementById("div2").innerHTML = "   <h2>Technologies used: Python, Selenium, Twilio</h2>";
+    document.getElementById("div3").innerHTML = "   <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbQ8HA7hYrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+    document.getElementById("div4").innerHTML = "   <h1>Narrative (Overview)</h1>";
+    document.getElementById("div5").innerHTML = "\
+    <h2>Briefly describe the artifact. What is it? When was it created?</h2>\
+    <p>For the Software Design and Engineering portion of my final project I decided to build upon a Selenium Script I created a few months ago. The goal of the script was to search the Disney Dining website for openings for their most popular dinner (Ohana). At the time the script worked but had a lot of problems and had to be run by the terminal. For this project I modified the script to add a GUI and fix the logic to reduce errors, I then added SMS notifications with Twilio and converted the entire project into an executable so it can be run on any computer.</p>\
+    <h2>Justify the inclusion of the artifact(s) in your ePortfolio. Why did you select this item? What specific components of the artifact showcases your skills and abilities in software development?</h2>\
+    <p>I selected this artifact because I found it interesting and it had a real-world use for me, I go to Disney World almost every year and it becomes a pain trying to get reservations. I also wanted to learn more about building GUI’s in Python. I thought this would also be a good way to learn how to convert Python scripts to executables and a little about playing with the Twilio API which ended up being much easier than I anticipated. I believe the logic I added to verify the user input from the GUI along with the various error handling shows how much I have improved since I originally wrote the script.</p>\
+    <h2>Reflect on the process of enhancing and/or modifying the artifact. What did you learn as you were creating it and improving it? What challenges did you face? How did you incorporate feedback as you made changes to the artifact? How was the artifact improved? </h2>\
+    <p>This project ended up taking a lot more time than I had anticipated, first I had to learn how to use Tkinter as I had no prior experience with Python GUIs. I then ran into problems with interpreting the input from the GUI and verifying that the input matched what could be entered into the Disney site, I ended up nesting a bunch of error checking that would ask the user to change inputs that were invalid. I also had some problems including the Chrome WebDriver into the executable as this is a separate file that allows Selenium to run, it is required for the application to work. Overall this was a very fun project and I feel like I learned a lot; it makes it even better than I can use this to get a reservation for my next trip!</p>\
+    ";
 }
-function contactFunction(){
-    document.getElementById("div1").innerHTML = "<h1>Contact info</h1>";
-    document.getElementById("div2").innerHTML = "<h3>Phone:<br>603-973-5334</h3>";
-    document.getElementById("div3").innerHTML = "<h3>Email:<br><a href=\"mailto:Brandon.Reid@Snhu.Edu\">Brandon.Reid@Snhu.Edu</a></h3>";
-    document.getElementById("div4").innerHTML = "";
-    document.getElementById("div5").innerHTML = "";
+function adsFunc(){ // done
+    document.getElementById("div1").innerHTML = "   <button class=\"button\" onClick=\"window.open('pokedex.html');\"><span class=\"icon\">PokeDex Application</span></button>\
+                                                    <button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/Ziggus.github.io/blob/master/pokedex.html');\"><span class=\"icon\">PokeDex GitHub page</span></button>";
+    document.getElementById("div2").innerHTML = "   <h2>Technologies used: HTML, CSS, JavaScript, Firebase</h2>";
+    document.getElementById("div3").innerHTML = "   <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/noA23FgyD5c\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+    document.getElementById("div4").innerHTML = "   <h1>Narrative (Overview)</h1>";
+    document.getElementById("div5").innerHTML = "\
+    <h2>Briefly describe the artifact. What is it? When was it created?</h2>\
+    <p>For the Algorithms and Data Structure portion of my final project I decided I was going to build a application in JavaScript that would function as a searchable database. I ended up just searching for free datasets and ran across a Pokémon dataset and I thought it would be fun to recreate the original Pokedex. </p>\
+    <h2>Justify the inclusion of the artifact(s) in your ePortfolio. Why did you select this item? What specific components of the artifact showcases your skills and abilities in software development?</h2>\
+    <p>I think this project ended up being a great learning experience, from the very beginning I had some hurdles to overcome. The requirements for the project were for the portfolio to be hosted with GitHub pages, which is very easy to setup but is a static website. Without realizing this I started off by creating a NodeJS database and quickly realized that this will not work with GitHub pages, I had to find a different way of hosting the database. After doing some research I came across Firebase which acted as a database but could be reached by making API calls to it. I uploaded the JSON file to Firebase and got to work building the algorithms to get the info into my static site. When you make calls to the Firebase database, they return an object, I had to then convert this to an array to parse the info using JavaScript for the user. I learned so much on this project, going into it I had never touched JavaScript or even heard of Firebase. I had almost no experience with any frontend languages and this project was eye opening. </p>\
+    <h2>Reflect on the process of enhancing and/or modifying the artifact. What did you learn as you were creating it and improving it? What challenges did you face? How did you incorporate feedback as you made changes to the artifact? How was the artifact improved? </h2>\
+    <p>For this project I ended up having to build error checking for if the search was no within the database. I also was comparing strings and it wasn’t very user friendly, for instance if the user did not capitalize the first letter it would never return anything so added a function to convert the first character of the input into a capital every time. I then had to convert the response from an object into an array and parse it bit by bit. I also wanted a random function as this made it feel more interactive so I had to could all the total entries in the database and then use the random function to pick one to return. This artifact changed a lot over the course of this class, it now searched properly and lets the user know if they entered something that is not in the database. </p>\
+    ";
 }
-function exampleVids(){ // no longer needed but leaving incase there is a future need
-    document.getElementById("div1").innerHTML = "   <h2><a href=\"https://github.com/Ziggus/Ziggus.github.io/blob/master/pokedex.html\">Pokedex example (Algorithm and Data Structures / Database)</a></h2>\
-                                                    <h3>Technologies: HTML, CSS, JavaScript, Firebase</h3>\
-                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Opm0wbwrhS0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
-
-    document.getElementById("div2").innerHTML = "   <h2><a href=\"https://github.com/Ziggus/firebase-crud-python\">Database</a></h2>\
-                                                    <h3>Technologies: Python, Firebase, JavaScript</h3>\
-                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/noA23FgyD5c\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
-
-    document.getElementById("div3").innerHTML = "   <h2><a href=\"https://github.com/Ziggus/DisneyReservationsCheckerApp\">Software Design and Engineering</a></h2>\
-                                                    <h3>Technologies: Python, Selenium, Twilio</h3>\
-                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbQ8HA7hYrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
-
-    document.getElementById("div4").innerHTML = "";
-    document.getElementById("div5").innerHTML = "";
+function dbFunc(){ // done
+    document.getElementById("div1").innerHTML = "   <button class=\"button\" onClick=\"window.open('https://github.com/Ziggus/firebase-crud-python');\"><span class=\"icon\">Python CRUD functions for PokeDex application (Click me!)</span></button>";
+    document.getElementById("div2").innerHTML = "   <h2>Technologies used: Python, Firebase, JavaScript</h2>";
+    document.getElementById("div3").innerHTML = "   <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/noA23FgyD5c\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+    document.getElementById("div4").innerHTML = "   <h1>Narrative (Overview)</h1>";
+    document.getElementById("div5").innerHTML = "\
+    <h2>Briefly describe the artifact. What is it? When was it created?</h2>\
+    <p>For the database artifact I thought it would be challenging to create a administration application within Python, with a GUI that could do all CRUD functions for the Firebase database I used with the Pokedex application. </p>\
+    <h2>Justify the inclusion of the artifact(s) in your ePortfolio. Why did you select this item? What specific components of the artifact showcases your skills and abilities in software development?</h2>\
+    <p>This project was challenging because it required learning the Admin SDK for Firebase, and prior to the Pokedex project I had no experience with Firebase so this was all new to me. I found this project to be challenging and rewarding, I created yet another GUI with Python but this time used the PySimpleGui library which was much easier than Tkinter. I also had to create algorithms that could interact with Firebase.</p>\
+    <h2>Reflect on the process of enhancing and/or modifying the artifact. What did you learn as you were creating it and improving it? What challenges did you face? How did you incorporate feedback as you made changes to the artifact? How was the artifact improved? </h2>\
+    <p>This artifact ended up being the most time consuming out of all of them, first I had issues getting the Firebase admin SDK to work with Python 3.8. Then I had to get the syntax correct and build the GUI to connect to the database. It ended up being neat, in the video I created a new entry with myself into the database and showed it on the web page. It updates in real time, which is interesting to see, there is no need to reload the page since every click calls the JavaScript function to make the API call. When I first got it to work properly it was very rewarding!</p>\
+    ";
 }
 function codeReview(){ //change link to video
-    document.getElementById("div1").innerHTML = "   <h2>Code Review</h2>\
-                                                    <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbQ8HA7hYrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
-    document.getElementById("div2").innerHTML = "";
+    document.getElementById("div1").innerHTML = "   <h2>Code Review</h2>";
+    document.getElementById("div2").innerHTML = "   <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbQ8HA7hYrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
     document.getElementById("div3").innerHTML = "";
     document.getElementById("div4").innerHTML = "";
     document.getElementById("div5").innerHTML = "";
 }
+function contactFunction(){ // done
+    document.getElementById("div1").innerHTML = "   <h1>Contact info</h1>";
+    document.getElementById("div2").innerHTML = "   <h3>Phone:<br>603-973-5334</h3>";
+    document.getElementById("div3").innerHTML = "   <h3>Email:<br><a href=\"mailto:Brandon.Reid@Snhu.Edu\">Brandon.Reid@Snhu.Edu</a></h3>";
+    document.getElementById("div4").innerHTML = "";
+    document.getElementById("div5").innerHTML = "";
+}
 </script>
-<body>
+<body onload="homeFunction()"></body onload>
     <div class="topBar">
         <h1 class="mainName"> Brandon Reid</h1>
     </div>
     <div>
         <ul>
-            <li><a href="https://ziggus.github.io/" onclick="homeFunction()">Home</a></li>
+            <li><a onclick="homeFunction()">Home</a></li>
             <li><a onclick="resumeFunction()">Resume</a></li>
-            <li><a onclick="projectsFunction()">Projects</a></li>
-            <li><a onclick="exampleVids()">Example videos</a></li>
+            <li><a onclick="sdeFunc()">Software Design and Engineering</a></li>
+            <li><a onclick="adsFunc()">Algorithm and Data Structures</a></li>
+            <li><a onclick="dbFunc()">Database</a></li>
             <li><a onclick="codeReview()">Code review</a></li>
             <li><a onclick="contactFunction()">Contact</a></li>
           </ul>
@@ -94,7 +103,9 @@ function codeReview(){ //change link to video
             <div id="div4"></div>
             <div id="div5"></div>
     </div>
-
+    <div class="footer">
+        <p>Brandon Reid, 2019</p>
+    </div>
 </body>
 </html>
 

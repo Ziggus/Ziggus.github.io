@@ -9,6 +9,15 @@ body {
     display: flex;
     justify-content: center;
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(200, 200, 255);
+  text-align: left;
+  max-height: 40px;
+}
 .mainName {
     font-weight: bold;
 }
@@ -29,9 +38,9 @@ ul {
     display: block;
     color: black;
     text-align: center;
-    padding: 18px;
+    padding: 15px;
     text-decoration: none;
-    width: 120px;
+    min-width: 120px;
     font-weight: bold;
   }
   
@@ -46,8 +55,13 @@ ul {
   }
   p{
       padding: 25px;
-      font-size: x-large;
-
+      max-width: 800px;
+      margin: auto;
+  }
+  h2{
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
   }
   .button {
     background-color: rgb(140, 140, 255);
@@ -65,3 +79,8 @@ ul {
   .button:hover {
     background-color: rgb(100, 100, 255);
   }
+.homeInfo{
+  max-width: 800px;;
+  padding: 10px;
+  margin: auto;
+}
