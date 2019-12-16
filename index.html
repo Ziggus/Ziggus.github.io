@@ -8,16 +8,27 @@
     <title>Brandon Reid</title>
 </head>
 <script>
-function homeFunction(){ // needs work
-    document.getElementById("div1").innerHTML = "<p class=\"homeInfo\">Test</p>";
-    document.getElementById("div2").innerHTML = "";
-    document.getElementById("div3").innerHTML = "";
-    document.getElementById("div4").innerHTML = "";
-    document.getElementById("div5").innerHTML = "";
+function homeFunction(){ // done
+    document.getElementById("div1").innerHTML = "   <h2>About me</h2>";
+    document.getElementById("div2").innerHTML = "\
+    <p>\
+    <img class=\"coverImage\" src=\"https://avatars0.githubusercontent.com/u/17677444?s=460&v=4\">\
+    Welcome to my website!<br><br>\
+    My name is Brandon and I am a 26-year-old soon to be computer science graduate who enjoys automating with selenium, building single page applications and playing video games. I have experience in the insurance industry and a strong desire to learn more about building applications.\
+    <br><br><br><br><br><br><br><br><br><br><br><br></p>";
+    document.getElementById("div3").innerHTML = "   <h2>Professional Self-Assessment</h2>";
+    document.getElementById("div4").innerHTML = "\
+    <p>\
+    Throughout the Computer Science program at SNHU I learned more than I imagined when I began, I never expected that this program would incorporate everything from Python scripts on a RaspberryPi changing lights based on the room temperature or movement all the way to creating 3D images from scratch with OpenGL. This program gave me hands on experience with a huge variety of languages, frameworks and libraries and it has made it easier to decide on an area of focus. I chose three challenging and useful projects to showcase what I have learned throughout this program and they will be displayed on my website. These projects include a Python application that uses Selenium to access the Disney dining reservation website and search for openings at my favorite restaurant then alerts me by SMS using Twilio when one is available. I decided it would be fun to find a free online dataset with the first generation Pokedex and create a webapp that functions similarly to the Pokedex I had when I was a kid, to accomplish this I had to learn JavaScript from scratch and use Firebase to create an API that could be accessed anywhere with the webapp. To build upon this Pokedex project I thought it would be fun to create a Python application that would enable CRUD functions for the webapp from my desktop. This was accomplished by making calls to the Firebase admin SDK and updating the database in real time. To accomplish these projects, I had to create algorithms to interpret user input since I create GUI’s for all the projects and define a data structures that would be reusable for both projects. \
+    </p>";
+    document.getElementById("div5").innerHTML = "\
+    <p>\
+    \
+    </P>";
 }
 
 function resumeFunction(){
-    document.getElementById("div1").innerHTML = " <a href=\"resume.pdf\" target=\"_blank\"> <img src=\"https://i.imgur.com/iLo8pRh.jpg\" href=\"https://github.com/Ziggus/Ziggus.github.io/blob/master/Resume.pdf\" target=\"_blank\"> </a>";
+    document.getElementById("div1").innerHTML = " <a href=\"resume.pdf\" target=\"_blank\"> <img src=\"https://i.imgur.com/iLo8pRh.jpg\" href=\"https://github.com/Ziggus/Ziggus.github.io/blob/master/Resume.pdf\" target=\"_blank\"></a>";
     document.getElementById("div2").innerHTML = "";
     document.getElementById("div3").innerHTML = "";
     document.getElementById("div4").innerHTML = "";
@@ -68,7 +79,7 @@ function dbFunc(){ // done
 }
 function codeReview(){ //change link to video
     document.getElementById("div1").innerHTML = "   <h2>Code Review</h2>";
-    document.getElementById("div2").innerHTML = "   <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kbQ8HA7hYrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+    document.getElementById("div2").innerHTML = "   <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/mULH8hh1H5w\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
     document.getElementById("div3").innerHTML = "";
     document.getElementById("div4").innerHTML = "";
     document.getElementById("div5").innerHTML = "";
